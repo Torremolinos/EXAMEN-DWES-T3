@@ -7,11 +7,13 @@ session_start();
 $localidadSeleccionada = '';
 if(isset($_SESSION['localidad'])) {
     $localidadSeleccionada = $_SESSION['localidad'];
+    echo "Última localidad seleccionada: " . $_SESSION['localidad'];
 }
 
 if(isset($_GET['localidad'])) {
     $localidadSeleccionada = $_GET['localidad'];
     $_SESSION['localidad'] = $localidadSeleccionada;
+    
 }
 
 ?>
